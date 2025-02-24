@@ -11,8 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please enter a search term.");
         }
     });
-});
 
+    const growButton = document.getElementById("grow-tree-btn");
+    if (growButton) {
+        growButton.addEventListener("click", growTreeAnimation);
+    }
+});
 
 const facts = [
     "Recycling one aluminum can saves enough energy to run a TV for three hours!",
@@ -41,3 +45,24 @@ function displayFacts() {
 }
 
 document.addEventListener("DOMContentLoaded", displayFacts);
+
+function growTreeAnimation() {
+    const treeContainer = document.getElementById("tree-container");
+    const treeStages = [
+        "🌱",
+        "🌿",
+        "🌳"
+    ];
+
+    let stageIndex = 0;
+    treeContainer.textContent = treeStages[stageIndex];
+
+    const interval = setInterval(() => {
+        stageIndex++;
+        if (stageIndex >= treeStages.length) {
+            clearInterval(interval);
+        } else {
+            treeContainer.textContent = treeStages[stageIndex];
+        }
+    }, 1000); 
+}
