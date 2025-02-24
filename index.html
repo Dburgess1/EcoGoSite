@@ -41,34 +41,8 @@
         <p>Group 1: Felix, Tamara</p>
     </footer>
 
-    <script>
-        const treeStages = ["🌱", "🌿", "🌳", "🎄"];
-        const ecoTips = [
-            "💧 Shorten your showers to save water.",
-            "🚴 Ride a bike or walk instead of driving.",
-            "🌞 Use solar-powered devices when possible.",
-            "♻️ Recycle paper, plastic, and glass.",
-            "🍃 Plant local species in your garden.",
-            "🛍️ Bring reusable bags when shopping.",
-            "🌍 Support eco-friendly brands and products."
-        ];
+    <script src="script.js"></script>
 
-        let stageIndex = 0;
-        let tipIndex = 0;
-
-        document.getElementById("grow-tree-btn").addEventListener("click", function() {
-            stageIndex = (stageIndex + 1) % treeStages.length;
-            document.getElementById("tree-container").textContent = treeStages[stageIndex];
-            document.getElementById("tree-container").style.transform = "scale(1.1)";
-            setTimeout(() => {
-                document.getElementById("tree-container").style.transform = "scale(1)";
-            }, 200);
-
-            tipIndex = (tipIndex + 1) % ecoTips.length;
-            document.getElementById("eco-tip").textContent = ecoTips[tipIndex];
-        });
-    </script>
-    
 </body>
 </html>
 
