@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshwater Companion - EcoGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <header>
+        <h1>EcoGo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="companion.html">Freshwater Companion</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>EcoGo Freshwater Companion</h2>
+        <p>Find nearby freshwater sources for your EcoGo bottle</p>
+    </section>
+    <main>
+        <section id="map-container">
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+        <section id="search" class="auth-container">
+            <input type="text" id="location-input" placeholder="Enter your location">
+            <button onclick="findSources()">Find Sources</button>
+            <ul id="source-list"></ul>
+        </section>
+        <section id="submit-source" class="auth-container">
+            <h2>Add a Source</h2>
+            <form id="source-form">
+                <input type="text" name="name" placeholder="Source Name" required>
+                <input type="text" name="location" placeholder="Location (e.g., city or coordinates)" required>
+                <textarea name="notes" placeholder="Notes (e.g., water quality, access)" rows="3"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Group 1: Doug</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="companion-script.js"></script>
+</body>
+</html>
